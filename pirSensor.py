@@ -12,14 +12,14 @@ class PirSensor(ISensor):
 		io.setup(pin, io.IN)         # activate input
 		self.setPin(pin)
 		self.setName(name)
-		print "Instantiate switch "+name+" (pin: "+str(self.pin)+")"
+		print ("Instantiate switch "+name+" (pin: "+str(self.pin)+")")
 
 	#ISensor override get sensor value active/inactive
 	def getValue(self):
-		print "Check "+self.name
+		print ("Check "+self.name)
 		isOpen = io.input(self.pin)
 		if isOpen:
-			print self.name+" is active!!!"
+			print (self.name+" is active!!!")
 		return isOpen
 
 	#ISensor override (prints msg)

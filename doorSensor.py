@@ -12,14 +12,14 @@ class DoorSensor(ISensor):
 		io.setup(pin, io.IN, pull_up_down=io.PUD_UP)  # activate input with PullUp		
 		self.setPin(pin)
 		self.setName(name)
-		print "Instantiate switch "+name+" (pin: "+str(self.pin)+")"
+		print ("Instantiate switch "+name+" (pin: "+str(self.pin)+")")
 	
 	#ISensor override get sensor value active/inactive
 	def getValue(self):
-		print "Check "+self.name
+		print ("Check "+self.name)
 		isOpen = io.input(self.pin)
 		if isOpen:
-			print self.name+" is open!!!"
+			print (self.name+" is open!!!")
 		return isOpen
 	
 	#ISensor override (prints msg)

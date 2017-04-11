@@ -27,7 +27,7 @@ while True:
 
 	
 	if not isAnybodyHere:
-		print "Boss is out"
+		print ("Boss is out")
 	
 	#get current state from sensors
 	door1 = doorSwitches[0].getValue()
@@ -36,11 +36,11 @@ while True:
 	
 	#any door is open?
 	switch = door1 or door2
-	print switch
+	print (switch)
 	
 	if switch or pirSensor1 and not alarmOn == True: #if any sensor is active (e.g door is open, or pir detected motion) and alarm is not already enabled
 		if not isAnybodyHere: #if your authentication device is out
-	        	print("ALARM!")
+			print("ALARM!")
 			alarmOn = True
 			x.sendMail("teonapster@gmail.com","ALARM!!!",doorSwitches[0].getAlarmMsg()+doorSwitches[1].getAlarmMsg()+pirSensor.getAlarmMsg()) #send mail (Remember to add your address here!
 			print("Mail sent to teonapster")

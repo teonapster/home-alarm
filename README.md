@@ -8,10 +8,10 @@ If any event is raised then it triggers alarm and sends email to the alarm owner
 * Python
 
 #### Hardware used
-* GPIO adapter (around 2-8EUR)
-* pir sensor (around 2EUR per piece)
-* magnetic swithces (around 4EUR for 5-6 pieces)
-* simple cable (i used some old ones with efficient enough armor)
+* GPIO adapter (costs around 2-8EUR)
+* pir sensor (costs around 2EUR per piece)
+* magnetic swithces (costs around 4EUR for 5-6 pieces)
+* simple cable (i used some old ones with efficient armor)
 
 ##### Execute
 You have just to run switches.py with:
